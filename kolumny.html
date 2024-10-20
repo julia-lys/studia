@@ -1,0 +1,123 @@
+<html lang="pl">
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Kolumny</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+        <style>
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+       
+        
+        .one-column,.four-columns, .three-columns, .three-images {
+            display: flex;
+            
+            padding: 10px;
+            text-align: center;
+            word-wrap: break-word;
+            justify-content: space-around;
+            overflow-wrap: break-word; /* Provides additional control for word breaking */
+            white-space: normal;
+            margin-bottom: 40px;
+        }
+        .column, .image-container {
+            width: 20%;
+            background-color: rgb(196, 235, 196);
+            padding: 10px;
+            text-align: center;
+        }
+        .one-column .column{
+            width: 100%;
+            margin-bottom: 40px;
+            justify-content: space-around;
+            
+            
+            padding: 10px;
+        }
+        .three-columns .column {
+           
+            width: 30%;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+       
+
+        </style>
+    
+    </head>
+    
+    <body>
+        <div class="container">
+            <!-- One Column Section -->
+            <div class="section-title">
+                <h2>Lorem Ipsum i moje koty</h2>
+            </div>
+            <div class="one-column">
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec placerat est, et sagittis tortor. Duis sollicitudin, dolor eu porta consequat, nunc nunc venenatis lorem, id faucibus quam ante a sem. Nullam at enim felis. Phasellus mattis, tellus sed pellentesque porta, est lorem placerat turpis, at aliquam dolor justo vitae nisl. Nullam rhoncus lectus elit. Integer consequat laoreet metus, eu accumsan metus. Aliquam feugiat commodo nunc, vehicula iaculis enim pellentesque non. Ut at blandit mauris. Curabitur dignissim mattis ante, eu tincidunt ligula accumsan eget. Fusce vel laoreet lorem. Curabitur erat leo, iaculis ut venenatis sit amet, egestas nec felis.
+
+                Suspendisse sit amet elit ut tortor vehicula congue vitae a turpis. Vivamus a libero vel mi viverra egestas. Nam nec scelerisque est, nec porttitor dolor. Proin lobortis luctus dignissim. Vivamus sodales ac dui in suscipit. Aliquam egestas ut lacus efficitur lobortis. Praesent quis diam in nulla dapibus ornare. Aliquam consectetur sodales volutpat. Sed sapien est, condimentum in est quis, consequat hendrerit sapien. Fusce sagittis nulla sed ultricies efficitur. Donec eu dapibus nulla. Morbi commodo diam ac erat rhoncus, nec auctor ex tincidunt. Donec ullamcorper auctor lacus, non faucibus tortor scelerisque id. Donec eu justo sed est tincidunt bibendum a congue est. Nullam aliquet semper ornare.
+                
+                Suspendisse potenti. Pellentesque non accumsan mi. Vivamus facilisis erat ac lectus facilisis, vitae ultrices velit tempus. In hac habitasse platea dictumst. Morbi nec justo vitae lacus aliquet dictum tincidunt ac massa. Ut non purus facilisis, lacinia augue sed, euismod est. Curabitur euismod justo in ligula sodales, eget porttitor erat venenatis. Suspendisse non lacus vel odio finibus suscipit. Proin sagittis nulla eget nisl eleifend, sed vestibulum quam hendrerit. Mauris consequat pretium iaculis. Nam vitae semper nulla.
+                
+                Nullam vitae enim quis elit aliquam finibus euismod sed lectus. Donec at dolor rutrum, volutpat justo vitae, rutrum justo. Mauris gravida, metus ac consequat egestas, eros nibh ullamcorper odio, a bibendum lectus magna vitae nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices ex non placerat sagittis. Cras blandit libero non ante luctus luctus. Sed commodo condimentum lacus, in tincidunt leo commodo ac. Praesent rutrum ligula eget elit sagittis, ac tempor leo efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra velit pharetra lacus convallis, non consequat leo vulputate. Fusce vitae malesuada ipsum, non sollicitudin lacus. Nulla in congue ex. Duis aliquet tincidunt ex eget imperdiet.
+                
+                Fusce at felis fermentum, ullamcorper eros id, mattis ipsum. Sed vel nunc eu risus euismod ullamcorper eu eget purus. Suspendisse posuere dolor ac nulla imperdiet sollicitudin. Etiam velit nulla, tincidunt aliquam faucibus vel, cursus eget massa. Donec mollis lobortis diam, a condimentum nisi. Vivamus commodo ultrices orci quis mollis. Curabitur volutpat sagittis nibh vel mattis. Morbi consequat nunc id efficitur tincidunt. Praesent at rutrum leo. Aliquam vulputate lorem in velit molestie, id interdum lacus consectetur. Quisque congue nibh sem, eu fringilla lorem aliquet nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vehicula egestas nisl eget pellentesque.</div>
+            </div>
+    
+            <!-- Four Columns Section -->
+            <div class="section-title">
+                <h2></h2>
+            </div>
+            <div class="four-columns">
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat at lorem non faucibus. Ut elementum, elit eget fermentum varius.</div>
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat at lorem non faucibus. Ut elementum, elit eget fermentum varius.</div>
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat at lorem non faucibus. Ut elementum, elit eget fermentum varius.</div>
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat at lorem non faucibus. Ut elementum, elit eget fermentum varius.</div>
+            </div>
+    
+            <!-- Three Columns Section -->
+            <div class="section-title">
+                <h2></h2>
+            </div>
+            <div class="three-columns">
+                <div class="column">Pazurek - znaleziony w śmietniku, najbardziej czuły kot jakiego znam</div>
+                <div class="column">Rudy - jedyny rasowy kot jakiego posiadamy i posiadaliśmy</div>
+                <div class="column">Lucek - miauczał pod oknem, dopóki nie wpuściliśmy go do jego nowego domu</div>
+            </div>
+    
+            <!-- Three Images Section -->
+            <div class="section-title">
+                <h2></h2>
+            </div>
+            <div class="three-images">
+                <div class="image-container">
+                    <img src="kot1.jpg" alt="Pazurek">
+                </div>
+                <div class="image-container">
+                    <img src="kot2.jpg" alt="Rudy">
+                </div>
+                <div class="image-container">
+                    <img src="kot3.jpg" alt="Lucek">
+                </div>
+            </div>
+        </div>
+    
+
+
+    </body>
+</html>
