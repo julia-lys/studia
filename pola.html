@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Wypełnianie pól</title>
+    <style>
+        body{
+       background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formularz danych osobowych</h2>
+<form action="/submit_form" method="post">
+    <label for="fname">Imię:</label><br>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="lname">Nazwisko:</label><br>
+    <input type="text" id="lname" name="lname" required><br><br>
+
+    <label for="ulica">Ulica:</label><br>
+    <input type="text" id="ulica" name="ulica" required><br><br>
+
+    <label for="dom">Numer domu:</label><br>
+    <input type="text" id="dom" name="dom" required><br><br>
+
+    <label for="mieszkanie">Numer mieszkania:</label><br>
+    <input type="text" id="mieszkanie" name="mieszkanie"><br><br>
+
+    <label for="telefon">Telefon:</label><br>
+    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="" required><br><br>
+
+    <label for="data_urodzenia">Data urodzenia:</label><br>
+    <input type="date" id="data_urodzenia" name="data_urodzenia" required><br><br>
+
+    <label for="prawo_jazdy">Czy posiadasz prawo jazdy?</label><br>
+    <select id="prawo_jazdy" name="prawo_jazdy" required>
+        <option value="tak">Tak</option>
+        <option value="nie">Nie</option>
+    </select><br><br>
+
+    <label for="plec">Płeć:</label><br>
+    <select id="plec" name="plec" required>
+        <option value="m">Mężczyzna</option>
+        <option value="k">Kobieta</option>
+        <option value="inne">Inne</option>
+    </select><br><br>
+
+    <label for="miasto">Miasto:</label><br>
+    <input type="text" id="miasto" name="miasto" required><br><br>
+
+    
+</form>
+
+<p>Powrót do menu:</p>
+<div>
+    <a href="https://julia-lys.github.io/studia/">Kliknij aby powrócić</a>
+</div>
+</body>
+</html>
