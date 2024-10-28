@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularz Osobowy</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style dla przycisku */
+        button {
+            background-color: rgb(216, 147, 197); /* Kolor tła przycisku */
+            color: white;             /* Kolor tekstu */
+            padding: 10px 20px;       /* Wewnętrzne odstępy */
+            border: none;             /* Usuń obramowanie */
+            border-radius: 5px;       /* Zaokrąglone rogi */
+            cursor: pointer;          /* Zmienny kursor po najechaniu */
+            font-size: 16px;          /* Rozmiar tekstu */
+        }
+        /* Zmiana koloru przycisku po najechaniu */
+        button:hover {
+            background-color: rgb(247, 92, 162); /* Ciemniejszy kolor po najechaniu */
+        
+        
+}
+    
+    </style>
 </head>
 <body>
 
     <div class="container">
         <h2>Formularz Osobowy</h2>
+
+        
         <form action="#" method="post">
             <label for="imie">Imię:</label>
             <input type="text" id="imie" name="imie" required>
