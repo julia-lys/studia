@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(170, 212, 170);
+
+}#kalkulator{
+    font-family: Arial,sans-serif;
+    background-color: rgb(28, 103, 28);
+    border-radius: 15px;
+    max-width:  500px;
+    overflow: hidden;
+   
+}
+#wyswietlacz{
+    width:100%;
+    padding: 20px; /*zwiekszam wyswietlacz*/
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: rgb(41, 147, 41);
+    color: white;
+    
+}
+#przyciski{
+    display: grid; /*ustawim przyciski pionowo*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /*przerwy pomiedzy przycikami*/
+    padding: 25px; /*taka ramka dookola*/
+}
+#czyszczenie
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+   
+}
+button{
+    width: 100px;    
+    height: 100px;   
+    border-radius:50px; /*zmieniam ksztalt przycisku z kwadratu na kolo*/    
+    border: none; /*pozbawiam przycisk ramki*/
+    background-color: rgb(106, 193, 106);
+    color: white;
+    font-size: 3rem;
+}
+button:hover{
+    background-color: rgb(157, 17, 17);
+}
+button:active{
+    background-color: purple;
+}
+.operator-przycisk{
+background-color: rgb(98, 180, 63);
+}
+.operator-przycisk :hover{
+background-color: rgb(98, 200, 63);;
+}
