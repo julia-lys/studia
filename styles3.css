@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(170, 212, 170);
 
 }#kalkulator{
@@ -12,7 +12,8 @@ body{
     border-radius: 15px;
     max-width:  500px;
     overflow: hidden;
-   
+    height: 100%;
+    margin: 100px;
 }
 #wyswietlacz{
     width:100%;
