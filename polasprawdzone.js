@@ -68,6 +68,17 @@ function SprawdzDaneFormularza() {
     } else {
         dataUrodzenia.style.border = "1px solid green";
     }
+    if (!dataUrodzenia.value) {
+        zaznaczBlad(dataUrodzenia, "Podaj datę urodzenia.");
+    } else {
+        const dzisiaj = new Date();
+        const wybranaData = new Date(dataUrodzenia.value);
+        if (wybranaData >= dzisiaj) {
+            zaznaczBlad(dataUrodzenia, "Data urodzenia musi być wcześniejsza niż dzisiejsza.");
+        } else {
+            dataUrodzenia.style.border = "1px solid green";
+        }
+    }
 
     if (!regexMiasto.test(miasto.value)) {
         zaznaczBlad(miasto, "Podaj poprawne miasto.");
