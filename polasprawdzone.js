@@ -63,11 +63,7 @@ function SprawdzDaneFormularza() {
         telefon.style.border = "1px solid green";
     }
 
-    if (!dataUrodzenia.value) {
-        zaznaczBlad(dataUrodzenia, "Podaj datę urodzenia.");
-    } else {
-        dataUrodzenia.style.border = "1px solid green";
-    }
+    
     if (!dataUrodzenia.value) {
         zaznaczBlad(dataUrodzenia, "Podaj datę urodzenia.");
     } else {
