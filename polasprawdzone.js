@@ -6,8 +6,6 @@ function SprawdzDaneFormularza() {
     const numerMieszkania = document.getElementById("numerMieszkania");
     const telefon = document.getElementById("telefon");
     const dataUrodzenia = document.getElementById("dataUrodzenia");
-    const prawoJazdy = document.getElementById("prawoJazdy");
-    const plec = document.querySelector('input[name="plec"]:checked');
     const miasto = document.getElementById("miasto");
 
     // Wyrażenia regularne
@@ -16,7 +14,7 @@ function SprawdzDaneFormularza() {
     const regexUlica = /^[A-ZĄĆĘŁŃÓŚŻŹ][a-ząćęłńóśżź]*(?:[\s\-][A-ZĄĆĘŁŃÓŚŻŹ][a-ząćęłńóśżź]*)*$/;
     const regexNumerDomu = /^[0-9]{1,4}[A-Za-z]?$/;
     const regexNumerMieszkania = /^[0-9]{1,4}$/;
-    const regexTelefon = /^\+?[0-9]{9,15}$/;
+    const regexTelefon = /^[0-9]{9}$/;
     const regexMiasto = /^[A-ZĄĆĘŁŃÓŚŻŹ][a-ząćęłńóśżź]*(?:[\s\-][A-ZĄĆĘŁŃÓŚŻŹ][a-ząćęłńóśżź]*)*$/;
 
     let poprawne = true;
@@ -53,14 +51,14 @@ function SprawdzDaneFormularza() {
         numerDomu.style.border = "1px solid green";
     }
 
-    if (numerMieszkania.value && !regexNumerMieszkania.test(numerMieszkania.value)) {
+    if (!regexNumerMieszkania.test(numerMieszkania.value)) {
         zaznaczBlad(numerMieszkania, "Podaj poprawny numer mieszkania.");
     } else {
         numerMieszkania.style.border = "1px solid green";
     }
 
     if (!regexTelefon.test(telefon.value)) {
-        zaznaczBlad(telefon, "Podaj poprawny numer telefonu (9-15 cyfr, opcjonalnie z +).");
+        zaznaczBlad(telefon, "Podaj poprawny numer telefonu (9 cyfr).");
     } else {
         telefon.style.border = "1px solid green";
     }
@@ -69,17 +67,6 @@ function SprawdzDaneFormularza() {
         zaznaczBlad(dataUrodzenia, "Podaj datę urodzenia.");
     } else {
         dataUrodzenia.style.border = "1px solid green";
-    }
-
-    if (!prawoJazdy.value) {
-        zaznaczBlad(prawoJazdy, "Wybierz, czy posiadasz prawo jazdy.");
-    } else {
-        prawoJazdy.style.border = "1px solid green";
-    }
-
-    if (!plec) {
-        alert("Wybierz swoją płeć.");
-        poprawne = false;
     }
 
     if (!regexMiasto.test(miasto.value)) {
