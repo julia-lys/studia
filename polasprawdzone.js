@@ -1,4 +1,4 @@
-function sprawdzDaneFormularza() {
+function SprawdzDaneFormularza() {
     const imie = document.getElementById("imie");
     const nazwisko = document.getElementById("nazwisko");
     const ulica = document.getElementById("ulica");
@@ -21,89 +21,72 @@ function sprawdzDaneFormularza() {
 
     let poprawne = true;
 
-    // Funkcja do oznaczenia błędnego pola
+    // Funkcja pomocnicza
     function zaznaczBlad(element, wiadomosc) {
         element.style.border = "2px solid red";
         alert(wiadomosc);
         poprawne = false;
     }
 
-    // Sprawdzanie imienia
+    // Walidacje
     if (!regexImie.test(imie.value)) {
         zaznaczBlad(imie, "Podaj poprawne imię (wielka litera na początku, 1-31 znaków).");
     } else {
         imie.style.border = "1px solid green";
     }
 
-    // Sprawdzanie nazwiska
     if (!regexNazwisko.test(nazwisko.value)) {
         zaznaczBlad(nazwisko, "Podaj poprawne nazwisko (wielka litera na początku, ewentualnie dwuczłonowe).");
     } else {
         nazwisko.style.border = "1px solid green";
     }
 
-    // Sprawdzanie ulicy
     if (!regexUlica.test(ulica.value)) {
         zaznaczBlad(ulica, "Podaj poprawną nazwę ulicy.");
     } else {
         ulica.style.border = "1px solid green";
     }
 
-    // Sprawdzanie numeru domu
     if (!regexNumerDomu.test(numerDomu.value)) {
         zaznaczBlad(numerDomu, "Podaj poprawny numer domu.");
     } else {
         numerDomu.style.border = "1px solid green";
     }
 
-    // Sprawdzanie numeru mieszkania
     if (numerMieszkania.value && !regexNumerMieszkania.test(numerMieszkania.value)) {
         zaznaczBlad(numerMieszkania, "Podaj poprawny numer mieszkania.");
     } else {
         numerMieszkania.style.border = "1px solid green";
     }
 
-    // Sprawdzanie numeru telefonu
     if (!regexTelefon.test(telefon.value)) {
         zaznaczBlad(telefon, "Podaj poprawny numer telefonu (9-15 cyfr, opcjonalnie z +).");
     } else {
         telefon.style.border = "1px solid green";
     }
 
-    // Sprawdzanie daty urodzenia
     if (!dataUrodzenia.value) {
         zaznaczBlad(dataUrodzenia, "Podaj datę urodzenia.");
     } else {
         dataUrodzenia.style.border = "1px solid green";
     }
 
-    // Sprawdzanie prawa jazdy
     if (!prawoJazdy.value) {
         zaznaczBlad(prawoJazdy, "Wybierz, czy posiadasz prawo jazdy.");
     } else {
         prawoJazdy.style.border = "1px solid green";
     }
 
-    // Sprawdzanie płci
     if (!plec) {
         alert("Wybierz swoją płeć.");
         poprawne = false;
     }
 
-    // Sprawdzanie miasta
     if (!regexMiasto.test(miasto.value)) {
-        zaznaczBlad(miasto, "Podaj poprawną nazwę miasta.");
+        zaznaczBlad(miasto, "Podaj poprawne miasto.");
     } else {
         miasto.style.border = "1px solid green";
     }
 
-    // Zwrócenie wyniku walidacji
     return poprawne;
 }
-
-// Powiązanie funkcji z formularzem
-document.querySelector("form").onsubmit = function (e) {
-    if (!sprawdzDaneFormularza()) {
-        e.preventDefault(); // Zatrzymuje wysyłanie formularza, jeśli dane są niepoprawne
-    }
-};
