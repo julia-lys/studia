@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Osobowy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="polasprawdzone.js"></script>
+</head>
+    <style>
+        /* Style dla przycisku */
+        button {
+            background-color: rgb(216, 147, 197); /* Kolor tła przycisku */
+            color: white;             /* Kolor tekstu */
+            padding: 10px 20px;       /* Wewnętrzne odstępy */
+            border: none;             /* Usuń obramowanie */
+            border-radius: 5px;       /* Zaokrąglone rogi */
+            cursor: pointer;          /* Zmienny kursor po najechaniu */
+            font-size: 16px;          /* Rozmiar tekstu */
+        }
+        /* Zmiana koloru przycisku po najechaniu */
+        button:hover {
+            background-color: rgb(247, 92, 162); /* Ciemniejszy kolor po najechaniu */
+        
+        
+}
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formularz Osobowy</h2>
+
+
+        <form action="#" method="post">
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+
+            <label for="ulica">Ulica:</label>
+            <input type="text" id="ulica" name="ulica" required>
+
+            <label for="numerDomu">Numer domu:</label>
+            <input type="text" id="numerDomu" name="numerDomu" required>
+
+            <label for="numerMieszkania">Numer mieszkania:</label>
+            <input type="text" id="numerMieszkania" name="numerMieszkania">
+
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="dataUrodzenia">Data urodzenia:</label>
+            <input type="date" id="dataUrodzenia" name="dataUrodzenia" required>
+
+            <label for="prawoJazdy">Czy posiadasz prawo jazdy?</label>
+            <select id="prawoJazdy" name="prawoJazdy" required>
+                <option value="tak">Tak</option>
+                <option value="nie">Nie</option>
+            </select>
+
+            <label for="plec">Płeć:</label>
+            <div class="radio-group">
+                <input type="radio" id="mezczyzna" name="plec" value="mezczyzna" required>
+                <label for="mezczyzna">Mężczyzna</label>
+                <input type="radio" id="kobieta" name="plec" value="kobieta" required>
+                <label for="kobieta">Kobieta</label>
+                <input type="radio" id="inna" name="plec" value="inna" required>
+                <label for="kobieta">Inna</label>
+            </div>
+
+            <label for="miasto">Miasto:</label>
+            <input type="text" id="miasto" name="miasto" required>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+
+</body>
+</html>
