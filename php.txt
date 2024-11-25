@@ -5,25 +5,25 @@ LOGOWANIE
 <?php
 session_start();
 
-// Dummy credentials for login (use a database in practice)
+
 $valid_username = "username";
 $valid_password = "password";
 
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Validate username and password
+    
     if ($username === $valid_username && $password === $valid_password) {
-        // Set session variable for authentication
+        
         $_SESSION['logged_in'] = true;
 
-        // Redirect to the PHP wrapper for form.html
+        
         header("Location: serve_form.php");
         exit();
     } else {
-        // Failed login
+        
         $error_message = "Invalid username or password.";
     }
 }
