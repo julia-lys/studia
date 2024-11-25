@@ -1,5 +1,7 @@
 LOGOWANIE
 
+
+
 <?php
 session_start();
 
@@ -59,7 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+
 PODSUMOWANIE 
+
+
+
 
 <!DOCTYPE html>
 <html lang="pl">
