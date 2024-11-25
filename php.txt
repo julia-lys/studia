@@ -1,0 +1,123 @@
+LOGOWANIE
+
+<?php
+session_start();
+
+// Dummy credentials for login (use a database in practice)
+$valid_username = "username";
+$valid_password = "password";
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Validate username and password
+    if ($username === $valid_username && $password === $valid_password) {
+        // Set session variable for authentication
+        $_SESSION['logged_in'] = true;
+
+        // Redirect to the PHP wrapper for form.html
+        header("Location: serve_form.php");
+        exit();
+    } else {
+        // Failed login
+        $error_message = "Invalid username or password.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <form action="" method="POST">
+            <div class="form-group">
+            <label for="">Login:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+            <label for="">Hasło:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            
+
+            <button type="submit">Zaloguj się</button>
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+PODSUMOWANIE 
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie danych osobowych</title>
+    
+</head>
+<body>
+<div>
+<h2>Podsumowanie danych osobowych</h2>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $imie = htmlspecialchars($_POST['imie']);
+    $nazwisko = htmlspecialchars($_POST['nazwisko']);
+    $ulica = htmlspecialchars($_POST['ulica']);
+    $numerDomu = htmlspecialchars($_POST['numerDomu']);
+    $numerMieszkania = htmlspecialchars($_POST['numerMieszkania']);
+    $telefon = htmlspecialchars($_POST['telefon']);
+    $dataUrodzenia = htmlspecialchars($_POST['dataUrodzenia']);
+    $prawoJazdy = htmlspecialchars($_POST['prawoJazdy']);
+
+    echo "<p>Imię: $imie</p>";
+    echo "<p>Nazwisko: $nazwisko</p>";
+    echo "<p>Ulica: $ulica</p>";
+    echo "<p>Numer domu: $numerDomu</p>";
+    echo "<p>Numer mieszkania: $numerMieszkania</p>";
+    echo "<p>Telefon: $telefon</p>";
+    echo "<p>Data urodzenia: $dataUrodzenia</p>";
+    echo "<p>Czy posiadasz prawo jazdy: $prawoJazdy</p>";
+} else {
+    echo "<p>Formularz nie został poprawnie przesłany.</p>";
+}
+?>
+</div>
+</body>
+</html>
+
+
+
+
+
+DANE
+
+
+
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    // Redirect to login page if not logged in
+    header("Location: form.html");
+    exit();
+}
+
+// Serve form.html content
+echo file_get_contents("form.html");
+?>
+
