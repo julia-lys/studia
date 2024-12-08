@@ -35,10 +35,10 @@
                 #sellerAddress { top: 210px; left: 150px; width: 300px; } /*TEGO JUZ NIE RUSZAM*/
                 #buyerName { top: 300px; left: 250px; width: 300px; }  /*TEGO JUZ NIE RUSZAM*/
                 #buyerAddress { top: 333px; left: 150px; width: 300px; } /*TEGO JUZ NIE RUSZAM*/
-                #invoiceDate { top: 220px; left: 760px; width: 50px; } 
+                #invoiceDate { top: 220px; left: 760px; width: 100px; } 
                 #itemName { top: 425px; left: 100px; width: 300px; } 
                 #itemQuantity { top: 420px; left: 450px; width: 50px; }
-                #itemPrice { top: 420px; left: 510px; width: 100px; }
+                #itemPrice { top: 420px; left: 510px; width: 80px; }
                 #total { top: 700px; left: 610px; width: 100px; font-weight: bold; }
                 input {
                     border: none;
