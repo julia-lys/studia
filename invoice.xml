@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="invoice.xsl"?>
+<invoice>
+    <seller>
+        <name>Jan Kowalski</name>
+        <address>Warszawa, ul. Polna 12</address>
+    </seller>
+    <buyer>
+        <name></name>
+        <address></address>
+    </buyer>
+    <details>
+        <date></date>
+        <item>
+            <name></name>
+            <quantity></quantity>
+            <price></price>
+        </item>
+    </details>
+    <summary>
+        <total></total>
+    </summary>
+</invoice>
