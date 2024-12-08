@@ -20,7 +20,7 @@
     height: 1414px; /* Wysokość kontenera */
     margin: 0 auto; /* Wyśrodkowanie kontenera na stronie */
     position: relative;
-    background: url('faktura.jpg') no-repeat top center; /* Pozycjonowanie obrazu w górnej części */
+    background: url('https://julia-lys.github.io/studia/faktura.jpg') no-repeat top center; /* Pozycjonowanie obrazu w górnej części */
     background-size: contain; /* Dopasowanie obrazu do kontenera */
     background-color: white; /* Tło dla pustych obszarów */
     border: 1px solid #ccc; /* Opcjonalnie: obramowanie */
