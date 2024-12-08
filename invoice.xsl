@@ -6,8 +6,9 @@
             <title>Faktura</title>
             <style>
                 body {
+                    
     margin: 0; /* Usunięcie domyślnych marginesów */
-    padding: 0; /* Usunięcie domyślnych odstępów */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,15 +31,15 @@
                     font-size: 14px;
                     color: black;
                 }
-                #sellerName { top: 100px; left: 150px; width: 300px; }
-                #sellerAddress { top: 140px; left: 150px; width: 300px; }
-                #buyerName { top: 220px; left: 150px; width: 300px; }
-                #buyerAddress { top: 260px; left: 150px; width: 300px; }
-                #invoiceDate { top: 100px; left: 800px; width: 150px; }
-                #itemName { top: 380px; left: 150px; width: 300px; }
-                #itemQuantity { top: 380px; left: 500px; width: 100px; }
-                #itemPrice { top: 380px; left: 650px; width: 100px; }
-                #total { top: 600px; left: 650px; width: 100px; font-weight: bold; }
+                #sellerName { top: 170px; left: 150px; width: 300px; }  /*TEGO JUZ NIE RUSZAM*/
+                #sellerAddress { top: 210px; left: 150px; width: 300px; } /*TEGO JUZ NIE RUSZAM*/
+                #buyerName { top: 300px; left: 250px; width: 300px; }  /*TEGO JUZ NIE RUSZAM*/
+                #buyerAddress { top: 333px; left: 150px; width: 300px; } /*TEGO JUZ NIE RUSZAM*/
+                #invoiceDate { top: 100px; left: 800px; width: 150px; } 
+                #itemName { top: 425px; left: 100px; width: 300px; } 
+                #itemQuantity { top: 420px; left: 450px; width: 100px; }
+                #itemPrice { top: 420px; left: 550px; width: 100px; }
+                #total { top: 700px; left: 640px; width: 100px; font-weight: bold; }
                 input {
                     border: none;
                     background: none;
@@ -52,31 +53,31 @@
         <body>
             <div class="invoice-container">
                 <div class="field" id="sellerName">
-                    Sprzedawca: <xsl:value-of select="invoice/seller/name" />
+                <xsl:value-of select="invoice/seller/name" />
                 </div>
                 <div class="field" id="sellerAddress">
-                    Adres: <xsl:value-of select="invoice/seller/address" />
+                <xsl:value-of select="invoice/seller/address" />
                 </div>
                 <div class="field" id="buyerName">
-                    Nabywca: <input type="text" id="buyerNameInput" placeholder="Imię i nazwisko" />
+                <input type="text" id="buyerNameInput" placeholder="Imię i nazwisko" />
                 </div>
                 <div class="field" id="buyerAddress">
-                    Adres: <input type="text" id="buyerAddressInput" placeholder="Adres" />
+                <input type="text" id="buyerAddressInput" placeholder="Adres" />
                 </div>
                 <div class="field" id="invoiceDate">
-                    Data: <input type="date" id="invoiceDateInput" />
+                <input type="date" id="invoiceDateInput" />
                 </div>
                 <div class="field" id="itemName">
-                    Towar: <input type="text" id="itemNameInput" placeholder="Nazwa towaru" />
+                <input type="text" id="itemNameInput" placeholder="Nazwa towaru" />
                 </div>
                 <div class="field" id="itemQuantity">
-                    Ilość: <input type="number" id="itemQuantityInput" value="1" />
+                <input type="number" id="itemQuantityInput" value="1" />
                 </div>
                 <div class="field" id="itemPrice">
-                    Cena: <input type="number" id="itemPriceInput" value="0.00" step="0.01" />
+                <input type="number" id="itemPriceInput" value="0.00" step="0.01" />
                 </div>
                 <div class="field" id="total">
-                    Razem: <span id="totalValue">0.00</span> zł
+                <span id="totalValue">0.00</span> zł
                 </div>
             </div>
             <script>
