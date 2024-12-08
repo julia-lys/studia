@@ -85,6 +85,13 @@
                 const priceInput = document.getElementById('itemPriceInput');
                 const totalSpan = document.getElementById('totalValue');
 
+                function validateInput(input) {
+                     if (parseFloat(input.value) < 0) {
+                    input.value = 0; // Jeśli wartość jest mniejsza od zera, ustaw na 0
+                    }
+                }       
+
+
                 function updateTotal() {
                     const quantity = parseFloat(quantityInput.value) || 0;
                     const price = parseFloat(priceInput.value) || 0;
